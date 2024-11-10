@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="main-heading">Resume Generator</h2>
+
+      <form id="resume-form">
+        <!-- Personal Information Section -->
+        <div class="section">
+          <h3>Personal Information</h3>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="image">Image</label>
+          <input type="file" id="profilePicture" name="image" required />
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+          <h3>Skills</h3>
+          <label for="skills">Enter Skills (comma separated)</label>
+          <input type="text" id="skills" name="skills" placeholder="e.g., HTML, CSS, JavaScript" required />
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+          <h3>Education</h3>
+          <label for="degree">Degree</label>
+          <input type="text" id="degree" name="degree" required />
+          <label for="institution">Institution</label>
+          <input type="text" id="institution" name="institution" required />
+          <label for="years">Years</label>
+          <input type="text" id="years" name="years" required />
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="section">
+          <h3>Work Experience</h3>
+          <label for="company1">Company Name</label>
+          <input type="text" id="company" name="company1" required />
+          <label for="position1">Position</label>
+          <input type="text" id="position" name="position1" required />
+          <label for="duration1">Duration</label>
+          <input type="text" id="duration" name="duration1" required />
+          <label for="tasks1">Key Responsibilities (comma separated)</label>
+          <textarea id="tasks1" name="tasks1" rows="3" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Generate Resume</button>
+        <div id="resumeOutput" class="resume-output print_area"></div>
+      </form>
+
+      <!-- Container where generated resume will display -->
+    </div>
+  </body>
+  
+</html>
